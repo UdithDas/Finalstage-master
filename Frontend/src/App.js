@@ -9,26 +9,27 @@ import Comment from './pages/Comment.jsx';
 import Product from './pages/Product.jsx';
 import ProductList from './pages/ProductList.jsx';
 import Body from './pages/Body.jsx';
+import Login from './pages/auth/Login.jsx';
 
 const App = () => {
-  return (
-    
-    <BrowserRouter>
-    
-      <Sidebar>
-        <Routes>
-          {/* <Route path="/" element={<Body/>} /> */}
-          
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/register" element={<Comment method='post' />} />
-          <Route path="/analytics" element={<Analytics method='get'/>} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/productList" element={<ProductList />} />
-        </Routes>
-     </Sidebar>
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path='/login' element={<Login />} />
+            </Routes>
+            <Sidebar>
+                <Routes>
+                    {/* <Route path="/" element={<Body/>} /> */}
+                    {/* <Route path='/' element={<Dashboard />} /> */}
+                    <Route path='/about' element={<About />} />
+                    <Route path='/register' element={<Comment method='post' />} />
+                    <Route path='/analytics' element={<Analytics method='get' />} />
+                    <Route path='/product' element={<Product />} />
+                    <Route path='/productList' element={<ProductList />} />
+                </Routes>
+            </Sidebar>
+        </BrowserRouter>
+    );
 };
 
 export default App;

@@ -49,7 +49,7 @@ const Sidebar = ({children}) => {
             icon:<FaAddressCard/>
         },
         {
-            path:"/",
+            path:"/login",
             name:"LogOut",
             icon:<FaPowerOff/>
         }
