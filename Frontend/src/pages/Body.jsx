@@ -78,7 +78,7 @@ const navigate = useNavigate();
         if (isUsernameValid && isPasswordValid) {
             if (username === user.username && password === user.password) {
                 toast.success('Logging Successful');
-                navigate('/dashboard');
+                navigate('/sidebar');
                 changestatus(true);
                 setInputValue({
                     username: '',

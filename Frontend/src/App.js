@@ -15,12 +15,13 @@ const App = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path='/login' element={<Login />} />
+                <Route path='/' element={<Login />} />
             </Routes>
             <Sidebar>
                 <Routes>
                     {/* <Route path="/" element={<Body/>} /> */}
                     {/* <Route path='/' element={<Dashboard />} /> */}
+                    {/* <Route path='/sidebar' element={<Si />} /> */}
                     <Route path='/about' element={<About />} />
                     <Route path='/register' element={<Comment method='post' />} />
                     <Route path='/analytics' element={<Analytics method='get' />} />

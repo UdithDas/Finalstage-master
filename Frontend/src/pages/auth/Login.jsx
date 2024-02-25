@@ -94,7 +94,7 @@ const Login = () => {
                 });
 
                 if (response.data.message === 'Login Success') {
-                    navigate('/');
+                    navigate('/sidebar');
                 }
             } catch (error) {
                 console.log(error);
