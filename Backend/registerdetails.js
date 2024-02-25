@@ -16,7 +16,9 @@ state:String,
 district:String,
 userid:String,
 password:String,
-status:String
+status:String,
+latitude:String,
+longitude:String
 }
 );
 var registermodel =mongoose.model("register",registerschema)
