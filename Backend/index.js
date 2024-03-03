@@ -90,7 +90,7 @@ app.get('/tview', async (request, response) => {
 const query = request.params.query; // Access the route parameter correctly
 try {
 const result = await registermodel
-.find({plantname: {$regex: query, $options: 'i'}})
+.find({restuarant: {$regex: query, $options: 'i'}})
 .limit(10)
 .select('-_id'); // Exclude _id field, you can include/exclude fields as nee
 response.json(result); } catch (error) {
