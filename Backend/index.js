@@ -86,7 +86,17 @@ app.get('/tview', async (request, response) => {
     var data = await typemodel.find();
     response.send(data);
 });
-
+// for searching and retrieving plant details from a query string app.get('/searchplants/:query', async (request, response) => {
+const query = request.params.query; // Access the route parameter correctly
+try {
+const result = await plantdetailsmodel
+.find({plantname: {$regex: query, $options: 'i'}})
+.limit(10)
+.select('-_id'); // Exclude _id field, you can include/exclude fields as nee
+response.json(result); } catch (error) {
+response.status(500).json({ message: error.message });
+}
+});
 //Assign Port
 app.listen(3005, (request, response) => {
     console.log('Port is running in 3005');
