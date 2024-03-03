@@ -89,7 +89,7 @@ app.get('/tview', async (request, response) => {
 // for searching and retrieving plant details from a query string app.get('/searchplants/:query', async (request, response) => {
 const query = request.params.query; // Access the route parameter correctly
 try {
-const result = await plantdetailsmodel
+const result = await registermodel
 .find({plantname: {$regex: query, $options: 'i'}})
 .limit(10)
 .select('-_id'); // Exclude _id field, you can include/exclude fields as nee
